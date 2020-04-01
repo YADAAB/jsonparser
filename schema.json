@@ -1,0 +1,56 @@
+{
+	"type": "object",
+	"input_json": "data_sets/Data_sets.json",
+	"clean_data": "data_sets/processed_data.json",
+	"anamolies_data": "data_sets/anamolies_data.json",
+	"properties": {
+		"id": {
+			"type": "int",
+			"is_required": "yes"
+		},
+		"zip5": {
+			"type": "int",
+			"is_required": "yes",
+			"field_len": 5
+		},
+		"first_name": {
+			"type": "string",
+			"is_required": "yes",
+			"field_len": 255
+		},
+		"last_name": {
+			"type": "string",
+			"is_required": "yes",
+			"field_len": 255
+		},
+		"email": {
+			"type": "email",
+			"is_required": "yes"
+		},				
+		"phone": {
+			"type": "int",
+			"is_required": "yes",
+			"field_len":10
+		},
+		"created_at": {
+			"type": "datetime",
+			"is_required": "yes",
+			"date_format": "%Y-%m-%dT%H:%M:%S"
+		},
+		"updated_at": {
+			"type": "datetime",
+			"is_required": "no",
+			"date_format": "%Y-%m-%dT%H:%M:%S"
+		},
+		"birth_date": {
+			"type": "datetime",
+			"is_required": "yes",
+			"date_format": "%m/%d/%Y"
+		},
+		"status": {
+			"type": "enum",
+			"is_required": "yes",
+			"enum_list": ["active", "cancelled"]
+		}																		
+	}
+}
